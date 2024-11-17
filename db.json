@@ -1,8 +1,8 @@
 {
   "products": [
     {
-      "id": "65a3",
-      "title": "Sapato"
+      "title": "Sapato social",
+      "id": "65a3"
     },
     {
       "id": "ac5a",
@@ -11,6 +11,10 @@
     {
       "title": "Camiseta",
       "id": "a273"
+    },
+    {
+      "id": "742e",
+      "title": "Shorts Jeans"
     }
   ]
 }
