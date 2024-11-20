@@ -20,7 +20,6 @@ export class EditComponent {
   product: Product = inject(ActivatedRoute).snapshot.data['product'];
 
   onSubmit(product: Product) {
-    debugger
     this.productsService.update(this.product.id, product).subscribe(() => {
       this.matSnackBar.open('Produto editado com sucesso!', 'Ok');
 

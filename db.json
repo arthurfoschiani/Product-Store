@@ -1,20 +1,12 @@
 {
   "products": [
     {
-      "title": "Sapato social",
-      "id": "65a3"
+      "title": "Morango",
+      "id": "c70a"
     },
     {
-      "id": "ac5a",
-      "title": "Celular"
-    },
-    {
-      "title": "Camiseta",
-      "id": "a273"
-    },
-    {
-      "id": "742e",
-      "title": "Shorts Jeans"
+      "id": "a950",
+      "title": "Abacaxi"
     }
   ]
 }
