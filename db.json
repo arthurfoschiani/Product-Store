@@ -1,10 +1,6 @@
 {
   "products": [
     {
-      "id": "44ec",
-      "title": "Laranja"
-    },
-    {
       "id": "fb01",
       "title": "Melancia"
     },
@@ -15,6 +11,14 @@
     {
       "id": "89f5",
       "title": "Maça"
+    },
+    {
+      "id": "744f",
+      "title": "Morango"
+    },
+    {
+      "id": "673e",
+      "title": "Manga"
     }
   ]
 }

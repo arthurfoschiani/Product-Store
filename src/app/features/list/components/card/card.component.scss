@@ -1,0 +1,30 @@
+.example-card {
+  padding: 12px 0;
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.danger-button {
+  background-color: #cc0000;
+  color: #fff;
+  padding: 0 12px;
+  min-width: 80px;
+}
+
+.warn-button {
+  background-color: #e6b600;
+  color: #fff;
+  padding: 0 12px;
+  min-width: 80px;
+}

@@ -1,5 +1,19 @@
-import { ChangeDetectorRef, Component, ElementRef, EventEmitter, inject, input, Output, ViewChild } from '@angular/core';
-import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  EventEmitter,
+  inject,
+  input,
+  Output,
+  ViewChild,
+} from '@angular/core';
+import {
+  ReactiveFormsModule,
+  FormGroup,
+  FormControl,
+  Validators,
+} from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -18,7 +32,7 @@ import { ProductsService } from '../../services/products.service';
     MatButtonModule,
   ],
   templateUrl: './form.component.html',
-  styleUrl: './form.component.scss'
+  styleUrl: './form.component.scss',
 })
 export class FormComponent {
   productsService = inject(ProductsService);
@@ -37,7 +51,11 @@ export class FormComponent {
     this.form = new FormGroup({
       title: new FormControl<string>(this.product()?.title ?? '', {
         nonNullable: true,
-        validators: Validators.required,
+        validators: [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(50),
+        ],
       }),
     });
   }
@@ -54,7 +72,16 @@ export class FormComponent {
   }
 
   onSubmit(): void {
+    if (this.form.invalid) {
+      this.matSnackBar.open('Por favor, corrija os erros no formulário.', 'Fechar');
+      return;
+    }
+
     const product = this.form.value as Product;
     this.done.emit(product);
+  }
+
+  get titleControl() {
+    return this.form.get('title') as FormControl;
   }
 }

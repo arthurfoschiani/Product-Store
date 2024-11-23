@@ -18,7 +18,7 @@ import { filter, Observable } from 'rxjs';
       <button mat-button (click)="onNot()">Não</button>
       <button
         mat-raised-button
-        color="accent"
+        color="warn"
         cdkFocusInitial
         (click)="onYes()"
       >

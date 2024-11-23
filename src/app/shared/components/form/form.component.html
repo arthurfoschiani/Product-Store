@@ -9,8 +9,18 @@
         placeholder="Titulo"
         #titleInput
       />
+
+      @if (titleControl.hasError('required')) {
+        <mat-error>O título é obrigatório.</mat-error>
+      }
+      @if (titleControl.hasError('minlength')) {
+        <mat-error>O título deve ter no mínimo 3 caracteres.</mat-error>
+      }
+      @if (titleControl.hasError('maxlength')) {
+        <mat-error>O título deve ter no máximo 50 caracteres.</mat-error>
+      }
     </mat-form-field>
 
-    <button type="submit" mat-raised-button color="primary">Salvar</button>
+    <button class="button-form" type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Salvar</button>
   </div>
 </form>
